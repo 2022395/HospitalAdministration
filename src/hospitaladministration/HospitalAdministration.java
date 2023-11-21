@@ -29,7 +29,7 @@ public class HospitalAdministration {
         }else {
             System.out.println("Oh no! There was a database creation problem...");
         }
-        
+        //Adding p1 to the database
         DatabaseWriter dbw= new DatabaseWriter();
         if (dbw.addPatient(p1)){
             System.out.println("p1 added");
