@@ -4,6 +4,8 @@
  */
 package hospitaladministration;
 
+import java.sql.SQLException;
+
 /**
  *
  * @author volkan
@@ -13,7 +15,7 @@ public class HospitalAdministration {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InstantiationException, IllegalAccessException, SQLException, ClassNotFoundException {
         Patient p1=new Patient("Sam","15/11/23", "O+");
         Patient p2=new Patient("Lexie", "27/11/21", "A-");
         
@@ -21,6 +23,13 @@ public class HospitalAdministration {
         System.out.println(p2.getPatientID());
         
         System.out.println(Patient.getCurrentID());
+        if (DatabaseSetup.setupDB()){
+            System.out.println("Database and table created");
+        
+        }else {
+            System.out.println("Oh no! There was a database creation problem...");
+        }
+        
         
 
     }
