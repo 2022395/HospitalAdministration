@@ -23,6 +23,11 @@ public class Patient {
         this.bloodType = bloodType;
         this.patientID = currentID;
         currentID++;
+        
+    }
+
+    public static int getCurrentID() {
+        return currentID;
     }
 
     public String getName() {

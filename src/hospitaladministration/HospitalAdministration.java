@@ -19,6 +19,9 @@ public class HospitalAdministration {
         
         System.out.println(p1.getPatientID());
         System.out.println(p2.getPatientID());
+        
+        System.out.println(Patient.getCurrentID());
+        
 
     }
     
