@@ -14,12 +14,15 @@ public class Patient {
     private String birthDate;
     private String bloodType;
     private int patientID;
+    
+    private static int currentID = 1;
 
-    public Patient(String name, String birthDate, String bloodType, int patientID) {
+    public Patient(String name, String birthDate, String bloodType) {
         this.name = name;
         this.birthDate = birthDate;
         this.bloodType = bloodType;
-        this.patientID = patientID;
+        this.patientID = currentID;
+        currentID++;
     }
 
     public String getName() {
